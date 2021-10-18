@@ -1,0 +1,127 @@
+:root {
+    --product-name-padding: 5px;
+}
+
+body {
+    display: grid;
+    grid-gap: 1rem;
+
+    grid-template-areas: "header header header"
+                         "aside main main"
+                         "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+
+footer {
+    grid-area: footer;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    margin: 0 0 .5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 0 1rem 0 0 ;
+}
+
+header,
+aside, 
+main, 
+footer {
+    border: 4px solid var(--dark-color);
+    padding: 1rem;
+    background: white;
+}
+
+.accordion-item {
+    margin-bottom: 2rem;
+}
+
+button {
+    appearance: none;
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid var(--grey-dark);
+    border-width: 1px 0 0 0;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0 0 0;
+    margin: 1rem 0 1rem 0;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    margin: 0 .5rem 0 0;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+main ul li {
+    height: 200px;
+    border: 1px solid var(--grey-dark);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main ul li a {
+    width :100%;
+    font-size: .9rem;
+    height: 100%;
+    padding: 0 5px;
+}
+
+main ul li a::before {
+    content: '';
+    height: 100px;
+    width: calc(100% + 10px);
+    background-color: var(--grey-dark);
+    display: block;
+    margin-left: -5px;
+}
+
+main ul li a:focus {
+    outline: 4px solid var(--main-color); 
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.logo {
+    background-color: var(--dark-color);
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.logo:hover {
+    outline: 3px solid var(--main-color);
+}

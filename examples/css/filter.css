@@ -95,7 +95,6 @@ main ul li {
 
 main ul li a {
     width :100%;
-    font-size: .9rem;
     height: 100%;
     padding: 0 5px;
 }
@@ -108,7 +107,7 @@ main ul li a::before {
     display: block;
     margin-left: -5px;
 }
-
+main ul li a:hover,
 main ul li a:focus {
     outline: 4px solid var(--main-color); 
     background-color: transparent;
@@ -124,4 +123,59 @@ main ul li a:focus {
 
 .logo:hover {
     outline: 3px solid var(--main-color);
+}
+
+aside label {
+    cursor: pointer;
+}
+
+aside label {
+    position: relative;
+    padding-left: 5px;
+}
+
+aside input[type="checkbox"]  {
+    position: relative;
+    z-index: 1;
+    top: 2px;
+    left: -6px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+aside input[type="checkbox"] + label::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 8px;
+    left: -24px;
+    width: 16px;
+    height: 9px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border: solid;
+    border-width: 0 0 4px 4px;
+    border-top-color: transparent;
+    opacity: 0;
+    background: transparent;
+}
+
+aside input[type="checkbox"] + label::before {
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 3px;
+    left: -28px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--dark-color);
+    background: transparent;
+}
+
+aside input[type="checkbox"]:checked + label:after {
+    opacity: 1;
 }

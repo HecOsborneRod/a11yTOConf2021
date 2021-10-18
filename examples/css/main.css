@@ -250,8 +250,8 @@ a {
 a:focus {
     color: var(--dark-color);
     background-color: var(--main-color);
-    outline: 3px solid transparent;
-    box-shadow: 0 -2px var(--main-color), 0 4px var(--dark-color); 
+    outline: 3px solid var(--main-color);
+    outline-offset: 0;
 }
 
 /** SEARCH **/

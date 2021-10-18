@@ -70,7 +70,7 @@ button {
     border-width: 1px 0 0 0;
     width: 100%;
     text-align: left;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0;
     margin: 1rem 0 1rem 0;
     font-size: 1rem;
 }
@@ -131,14 +131,14 @@ aside label {
 
 aside label {
     position: relative;
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 aside input[type="checkbox"]  {
     position: relative;
     z-index: 1;
     top: 2px;
-    left: -6px;
+    left: 0px;
     width: 20px;
     height: 20px;
     margin: 0;
@@ -150,7 +150,7 @@ aside input[type="checkbox"] + label::after {
     box-sizing: border-box;
     position: absolute;
     top: 8px;
-    left: -24px;
+    left: -16px;
     width: 16px;
     height: 9px;
     -webkit-transform: rotate(-45deg);
@@ -169,7 +169,7 @@ aside input[type="checkbox"] + label::before {
     box-sizing: border-box;
     position: absolute;
     top: 3px;
-    left: -28px;
+    left: -20px;
     width: 24px;
     height: 24px;
     border: 2px solid var(--dark-color);
@@ -178,4 +178,8 @@ aside input[type="checkbox"] + label::before {
 
 aside input[type="checkbox"]:checked + label:after {
     opacity: 1;
+}
+
+aside input[type="checkbox"]:focus + label::before { 
+    outline: 3px solid var(--main-color);
 }

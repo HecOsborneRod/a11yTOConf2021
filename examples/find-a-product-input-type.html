@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a product - Input Type</title>
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body class="grt">
+    <header>
+        <h1><span>Find a product</span>- Input Type</h1>
+    </header>
+    <main>
+        <p>The first decision to make when creating a search box is to decide to use an input <code>type=“text”</code> or input <code>type=“search”</code>.</p>
+        <p>The main differences comes in the way browsers handle them.</p> 
+        <p>Some browsers show a cross icon that can be clicked to remove the search term instantly if desired (clear search).</p>
+        <p>In addition, modern browsers also tend to automatically store search terms previously entered across domains,
+        which then come up as autocomplete options when subsequent searches are performed in search inputs on that domain.</p>
+        <blockquote>
+            <p><strong>Instructions:</strong> Focus on the search boxes below, and start typing. Notice how some browsers like Chrome & Safari add a clickable element to clear the form field.</p>
+        </blockquote>
+
+        <h2>Example</h2>
+        <section>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="text"  placeholder="Search"  /&gt;</code></pre>
+            <input type="text" placeholder="Search" aria-label="Search" />
+        </section>
+        
+        <section>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search"  placeholder="Search"  /&gt;</code></pre>
+            <pre class="language-css"><code class="language-css">input[type="search"]::-webkit-search-cancel-button{
+    position:relative;
+    right: 0px;  
+    background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+    background-size: contain;
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+}</code>
+            </pre>
+            <input type="search" placeholder="Search" aria-label="Search" class="styled" />
+        </section>
+
+    </main>
+    <footer>
+        <p><a href="index.html">Back to index</a></p>
+    </footer>
+
+    <script src="js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a product - Input Attributes</title>
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="grt">
+    <a href="#main" class="skip-nav visually-hidden">Skip Navigation</a>
+    <header>
+        <h1><span>Find a product</span> - Input attributes</h1>
+        <p>The input field has many attributes that we might not neccesarily know. It's important to get to know them and the impact that they have on your multiple devices. Some of them are called Global Attributes (apply to any HTML element) others are specific to <code>&lt;input></code> element. Here's a list of the most common ones I use when implementing a Search component. </p>
+        <p>I have created a playground area to test the impact of most common options for each one of the attributes. Read the instructions carefully and if you have any question / comment, please let me know at Twitter <a href="https://www.twitter.com/HecOsborneRod">@HecOsborneRod</a></p>
+        <h3 id="attributes">Attributes</h3>
+        <nav aria-describedby="attributes">
+            <ul>
+                <li><a href="#placeholder">Placeholder</a></li>
+                <li><a href="#autocomplete">Autocomplete</a></li>
+                <li><a href="#spellcheck">Spellcheck</a></li>
+                <li><a href="#autocapitalize">Autocapitalize</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="placeholder">
+            <h2>Placeholder</h2>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search"  placeholder="Search"  /&gt;</code></pre>
+            </pre>
+ 
+        
+            <p><strong>Standard attribute: placeholder</strong></p>
+            <ul>
+                <li>Is not a a replacement for visible <code>&lt;label></code></li>
+                <li>Fails color contrast in most browsers</li>
+                <li>Information is not always announced by screen readers</li>
+            </ul>
+
+            <p><strong>More information about placeholders</strong></p>
+            <ul>
+                <li><a href="https://www.digitala11y.com/anatomy-of-accessible-forms-placeholder-is-a-mirage/">Anatomy of Accessible Forms! Placeholder is a Mirage</a></li>
+                <li><a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Placeholder_Research">Placeholder Research</a></li>
+                <li><a href="https://www.deque.com/blog/accessible-forms-the-problem-with-placeholders/">The Anatomy of Accessible Forms: The Problem with Placeholders</a></li>
+            </ul>
+       
+            <p><strong>Playground:</strong></p>
+            <blockquote><p><strong>Important:</strong> The placeholder label might be hidden if the width of the input box is small. This could happen if your label has too many characters or when resizing the browser to display in mobile devices.</p></blockquote>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" placeholder="What can we help you with today?" size="20" /></code></pre>
+            <form class="search">
+                <input type="search" name="search" placeholder="What can we help you with today?" aria-label="Search" class="styled" size="20" class="search__input" />
+                <button type="submit" value="search" aria-label="Search" class="search__btn">
+                    <img src="images/magnifier.svg" alt="" class="search__icon" />
+                </button>
+            </form>
+        </section>
+
+        <section id="autocomplete">
+            <h2>Autocomplete</h2>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" ... autocomplete="off"  /&gt;</code></pre>
+            <p><strong>Standard attribute: autocomplete</strong></p>
+            <p>The HTML autocomplete attribute lets web developers specify what if any permission the user agent has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.</p>
+            <p>If autocomplete is not disabled, your browser might fill the input element with previous search values</p>
+            <p>Autocomplete is not a boolean!.</p>
+            
+            <p><strong>More information about autocomplete:</strong></p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">The HTML autocomplete attribute</a></li>
+            </ul>
+            
+            <p><strong>Playground:</strong></p>
+            <blockquote><strong>Instructions:</strong> click on the following fields. Notice how the recommendation changes based on the term used in the <code>name</code> attribute. </blockquote>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" name="search" ... /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"  />
+            <br/>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" name="q" ... /&gt;</code></pre>
+            <input type="search" name="q" placeholder="Search" aria-label="Search" class="styled" />
+            <br/>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" name="q" autocomplete="off"... /&gt;</code></pre>
+            <input type="search" name="q" placeholder="Search" aria-label="Search" class="styled" autocomplete="off" />
+
+        </section>
+
+        <section id="autocorrect">
+            <h2>Autocorrect</h2>
+            <p><strong>Global non-standard attribute: autocorrect</strong></p>
+            <ul>
+                <li>A string indicating whether or not autocorrect is on or off. <strong>Safari only.</strong></li>
+            </ul>
+
+            <p><strong>Playground:</strong></p>
+            <blockquote><strong>Instructions:</strong> Type <code>wya</code> in the input boxes below. When using Safari, the word should be autocorrected and replaced with <code>way</code>.</blockquote>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" autocorrect="off"  /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"   autocorrect="off" />
+            <br/>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" autocorrect="on"  /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"   autocorrect="on" />
+            
+        </section>
+
+        <section id="spellcheck">
+            <h2>Spellcheck</h2>
+            <p><strong>Global non-standard attribute: spellcheck</strong></p>
+            <ul>
+                <li>Defines whether the element may be checked for spelling errors.</li>
+                <li>When errors are detected, they are indicated with a red curvy line under the mispelled word.</li>
+            </ul>
+
+
+            <p><strong>Playground:</strong></p>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" spellcheck="true"  /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"   spellcheck="true" />
+            <br/>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" spellcheck="false"  /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"   spellcheck="false" />
+            
+        </section>
+
+        <section id="autocapitalize">
+            <h2>Autocapitalize</h2>
+            <p><strong>Global non-standard attribute: autocapitalize</strong></p>
+            <ul>
+                <li>Controls whether and how text input is automatically capitalized as it is entered/edited by the user.</li>
+                <li>The autocapitalize attribute doesn’t affect behavior when typing on a physical keyboard. Instead, it affects the behavior of other input mechanisms, such as virtual keyboards on mobile devices and voice input.</li>
+            </ul>
+
+
+            <p><strong>Playground:</strong></p>
+            <blockquote><strong>Instructions:</strong> Fill the input fields below using your desktop & mobile device. Compare the result.</blockquote>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" autocapitalize="off"  /&gt;</code></pre>
+            <input type="search" name="search" placeholder="Search" aria-label="Search" class="styled"   autocapitalize="off" />
+            <br/>
+            <br/>
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" autocapitalize="words"  /&gt;</code></pre>
+            <input type="text" name="search" placeholder="Search" aria-label="Search" class="styled"   autocapitalize="words" />
+            
+        </section>
+
+        <section>
+            <h2>What I use today</h2>
+            <p>After many searches and text, this is the most common code I use when implementing a Search Bar</p>
+
+            <pre class="language-markup"><code class="language-markup">&lt;input type="search" name="query" 
+  autocomplete="off" autocrrect="off" autocapitalize="off" 
+  spellcheck="false" maxlength="150" aria-haspopup="true" 
+  aria-label="Search for products" title="Search for products" 
+  role="combobox" /></code></pre>
+        </section>
+    </main>
+    <footer>
+        <p><a href="index.html">Back to index</a></p>
+    </footer>
+
+    <script src="js/prism.js"></script>
+</body>
+</html>

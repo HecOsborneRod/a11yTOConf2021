@@ -172,10 +172,10 @@ input:focus {
 }
 
 
-input[type="search"].styled::-webkit-search-cancel-button{
+input[type="search"].styled::-webkit-search-cancel-button {
     position:relative;
     right: 0px;  
-    background: url(/images/close.svg) no-repeat 50% 50%;
+    background: url(../images/close.svg) no-repeat 50% 50%;
     background-size: contain;
     height: 20px;
     width: 20px;
@@ -252,6 +252,10 @@ a:focus {
     background-color: var(--main-color);
     outline: 3px solid var(--main-color);
     outline-offset: 0;
+}
+
+a:hover {
+    text-decoration-thickness: 3px;
 }
 
 /** SEARCH **/

@@ -1,7 +1,9 @@
 ## Day 1
 - [Could Browsers Fix More Accessibility Problems Automatically?](day1--fix-a11y-problems-automatically.md) - Hidde De Vries
 - [Building Equitable And Inclusive Studios With Disabled Employees](day1--build-inclusive-studio.md) - Courtney Craven
-
+- [Inclusion by Design](day1--inclusion-by-design.md) - Alicia Jarvis
+- [Making a strong case for accessibility](day1--making-a-strong-case-for-a11y.md) - Todd Libby
+- [Developing WCAG 3.0](day1--developing-wcag3.md) - Jeanne Spellman
 ## Other years
 
 - [2018 conference notes](https://hecosbornerod.github.io/a11yTOConf2018/)

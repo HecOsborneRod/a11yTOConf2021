@@ -1,5 +1,5 @@
 ## Day 1
-- [day1--fix-a11y-problems-automatically.md](Could Browsers Fix More Accessibility Problems Automatically?) - Hidde De Vries
+- [Could Browsers Fix More Accessibility Problems Automatically?](day1--fix-a11y-problems-automatically.md) - Hidde De Vries
 
 
 ## Other years

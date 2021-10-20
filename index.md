@@ -5,7 +5,6 @@
 - [Making a strong case for accessibility](day1--making-a-strong-case-for-a11y.md) - Todd Libby
 - [Developing WCAG 3.0](day1--developing-wcag3.md) - Jeanne Spellman
 
-- [Making A Strong Case For Accessibility](day1--making-a-strong-case-for-a11y.md) - Todd Libby
 ## Other years
 
 - [2018 conference notes](https://hecosbornerod.github.io/a11yTOConf2018/)

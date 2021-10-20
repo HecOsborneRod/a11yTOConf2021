@@ -1,6 +1,6 @@
 ## Day 1
 - [Could Browsers Fix More Accessibility Problems Automatically?](day1--fix-a11y-problems-automatically.md) - Hidde De Vries
-
+- [Building Equitable And Inclusive Studios With Disabled Employees](day1--build-inclusive-studio.md) - Courtney Craven
 
 ## Other years
 

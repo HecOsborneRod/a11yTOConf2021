@@ -6,10 +6,20 @@ body {
     display: grid;
     grid-gap: 1rem;
 
-    grid-template-areas: "header header header"
-                         "aside main main"
-                         "footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "header"
+                         "aside"
+                         "main"
+                         "footer";
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 780px) {
+    body {
+        grid-template-areas: "header header header"
+                            "aside main main"
+                            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 header {
@@ -62,7 +72,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-button {
+.accordion-item > button {
     appearance: none;
     background-color: white;
     font-weight: bold;
@@ -73,6 +83,31 @@ button {
     padding: 1rem 0;
     margin: 1rem 0 1rem 0;
     font-size: 1rem;
+}
+
+.accordion-item > ul {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.accordion-item > ul.expanded {
+    max-height: unset;
+}
+
+.accordion-item ul.expanded + button.see-more svg {
+    transform: rotate(180deg);
+}
+
+.accordion-item > button.see-more {
+    appearance: none;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: .6875rem 0 .5rem;
+    margin: 0;
+    font-size: 1rem;
+    border: 0;
 }
 
 input[type="checkbox"] {

@@ -21,6 +21,13 @@ body {
     font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
     line-height: 1.5em;
     font-size: 18px;
+    padding: 1rem;
+}
+
+@media screen and (min-width: 780px) {
+    body {
+        padding: 0;
+    }
 }
 
 /* https://grtcalculator.com/ */

@@ -1,0 +1,48 @@
+:root {
+    --red : #C01800;
+    --black: #222222;
+    --white: #FFF;
+
+    --label-bg-color: var(--red);
+    --label-color: #FFF;
+    --image-color: #e1e1e1;
+    --image-border: #bfbfbf;
+    --btn-bg-color: var(--black);
+    --btn-color: var(--white);
+}
+
+.card__label {
+    background-color: var(--label-bg-color);
+    color: var(--label-color);
+    max-width: 100px;
+    padding: 0 .5rem;
+}
+
+.card__img {
+    border: 1px solid var(--image-border);
+}
+
+.card__img-rect {
+    fill: var(--image-color);
+}
+
+.card__name {
+    font-weight: bold;
+}
+
+.card__brand {
+    font-size: .9rem;
+}
+
+.card__price-sale {
+    color: var(--red);
+}
+
+.card__price-orig {
+    text-decoration: line-through;
+}
+
+.card__button {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-color);
+}

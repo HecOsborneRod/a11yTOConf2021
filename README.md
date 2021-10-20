@@ -1,2 +1,3 @@
-# a11yTOConf Notes
-* [is Ecommerce Intentionally Unaccessible](/examples/index.html)
+Notes taken during the a11yTO Conference 2021
+
+

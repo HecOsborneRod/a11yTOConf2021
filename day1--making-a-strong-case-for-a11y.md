@@ -12,3 +12,4 @@ Twitter: (@toddlibby)[https://www.twitter.com/toddlibby]
 - Buy-in and support from executives will continuously be successful across the organization.
 - Being accessible is a differentiator 
 - Design systems should be used not only to ensure branding and consistency, but accessibility, inclusivivity, and understanding of code better.
+- Accessibility is a right, not a privilege.  

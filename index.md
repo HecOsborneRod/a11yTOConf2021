@@ -5,6 +5,13 @@
 - [Making a strong case for accessibility](day1--making-a-strong-case-for-a11y.md) - Todd Libby
 - [Developing WCAG 3.0](day1--developing-wcag3.md) - Jeanne Spellman
 
+## Day 2
+- [Turn Your Product Team Into A11y Champions](day2--a11y-champions.md) - Nina Baliga
+- [How Does The Awareness Of Assistive Technology Impact Students With Disabilities' Success At The College Level?](day2--success-at-college-level.md) - Humberto Hernandez
+- [What Y’all Need To Know About Captioned Videos On Social Media, Eh?](day2--social-media-captions.md) - Meryl Evans
+- [Conducting Inclusive And Accessible User Interviews](day2--accessible-inclusive-interviews.md) - Victory Brown
+- [Organizational Access: A Guide To Helping Your Organization Embrace Accessibility](day2--organizatonal-access.md) - Jennifer Chadwick And Mark Farmer
+- [How To Be A Great Accessibility Professional](day2--a11y-professional.md) - Cam Beaudoin
 ## Other years
 
 - [2018 conference notes](https://hecosbornerod.github.io/a11yTOConf2018/)

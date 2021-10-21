@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Type</title>
+    <link href="css/prism.css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="grt">
+    <header>
+        <h1>Visual Representation</h1>
+    </header>
+    <main>
+        <section>
+            <h2>What we <span>design</span></h2>
+            <p><img src="images/input-box-part-1.jpg" alt=""/></p>
+            <p>Typically we design the seach bar inside the Header as two elements: an input box and a button with a magnifier icon</p>
+            <p>At this point we need to understand that decisions already need to be made regarding the field label and the button hidden text.<code>placehoder</code>. </p>
+            <p><strong>Field label:</strong> which string do we want to use? "Search", "Search for products", "Search for Product & SKU Numbers". Providing a proper label will give users a better idea of the information that can be found using the textbox.</p>
+            <p><strong>Button label:</strong> this button has no visible label, <code>aria-label</code> is recommended to be used to give some indication to screen readers about the buton intent.</p>
+        </section>
+        <section>
+            <h2>What we might <span>need</span></h2>
+            <p>When this search box is developed, a robust component must created. Most likely we'll integrate with a Search API service to display a list of suggestions. This is considered a Combobox.</p>
+            <p>A combobox is a widget made up of the combination of two distinct elements: 1) a single-line textbox, and 2) an associated pop-up element for helping users set the value of the textbox.</p>
+            <p>The popup is hidden by default, and in Ecommerce typically is displayed when the textbox is focused or when a certain (configurable) number of characters are type.</p>
+            <p>Keyboard navigation must be designed and considered during development. For instance using <kbd>TAB</kbd> or <kbd>DOWN ARROW</kbd> should focus on the popup (if it's open).</p>
+            <ul>
+                <li>The entire element should be wrapped in a <code>&lt;form></code>.</li>
+                <li>The input element should have a clear button when user starts typing.</li>
+                <li>The component should show a list of suggestions when user starts typing.</li>
+                <li>Aria roles should be used: <code>&lt;combobox></code>, <code>&lt;listbox></code> and <code>&lt;option></code>.</li>
+            </ul>
+            <p><img src="images/input-box-part-2.jpg" alt=""/></p>
+
+            <h3>Useful links</h3>
+            <ul>
+                <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox">ARIA Examples - Combo Box</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role">ARIA: listbox role</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>What we didn't know we <span>need</span></h2>
+            <p><img src="images/input-box-part-3.jpg" alt=""/></p>
+        </section>
+    </main>
+    <footer>
+        <p><a href="index.html">Back to index</a></p>
+    </footer>
+
+    <script src="js/prism.js"></script>
+</body>
+</html>

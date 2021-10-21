@@ -87,7 +87,7 @@ body {
 .grt sub, .grt sup {
 	padding: 0 1px;
 }
-.grt code, .grt pre, .grt kbd {
+.grt code, .grt pre  {
 	font-size: 16px;
 }
 .grt code {
@@ -111,10 +111,10 @@ body {
 
 .grt kbd {
 	background-color: #fff;
-	padding: 3px 4px;
-	border-radius: 4px;
-	box-shadow: 0 0 4px 0 rgba(0,0,0,0.45);
+	padding: 3px 10px;
 	margin: 0 1px;
+    display: inline-block;
+    line-height: 1;
 }
 .grt .alert, .grt .note, .grt .box {
 	padding: 20px;
@@ -292,3 +292,15 @@ a:hover {
     width: 80%;
 }
 
+kbd {
+    font-size: 0.75em;
+    padding: 0.0625rem 0.5rem;
+    border-radius: 0.125rem;
+    border: 2px solid;
+    box-shadow: 1px 1px 0 #000, 2px 2px 0 #000;
+}
+/* HOME */ 
+.home {
+    /* background-color: var(--dark-color);
+    color: var(--light-color) */
+}

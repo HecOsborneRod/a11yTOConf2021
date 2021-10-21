@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Type</title>
+    <title>Visual design impact</title>
     <link href="css/prism.css" rel="stylesheet" />
     <link href="css/main.css" type="text/css" rel="stylesheet" />
 </head>
 <body class="grt">
     <header>
-        <h1>Visual Representation</h1>
+        <h1>Visual design impact</h1>
     </header>
     <main>
         <section>
@@ -44,11 +44,23 @@
         <section>
             <h2>What we didn't know we <span>need</span></h2>
             <p><img src="images/input-box-part-3.jpg" alt=""/></p>
+            <p>Some websites, most commonly appareal use an enhance component that shows more information in the pop-up element. For example:</p>
+            <ul>
+                <li>Top Results: a list of links that relates to the search term</li>
+                <li>Categories: a list of recommended categories based on the search term</li>
+                <li>Detail list of products: containing images, title, price</li>
+                <li>See more results button: will drive the user to the Search result page</li>
+            </ul>
+
+            <p>In some cases when the categories are hovered, the list of products changes. Consider how a user with keyboard will navigate this pop-up. Think how a screen reader will navigate this.</p>
+
+            <p>While discussing this component with some of my colleages, here are their comments</p>
+            <blockquote>“I can't imagine the data structure, the code, how to communicate this to a screen reader, or how to navigate it with keyboard” </blockquote>
+            <blockquote>“This went from 3 points story to a 21 points epic”</blockquote>
+
+            <p>The impact of implementing a solution like this, is that it might require an entire team to build and maintain this component.</p>
         </section>
     </main>
-    <footer>
-        <p><a href="index.html">Back to index</a></p>
-    </footer>
 
     <script src="js/prism.js"></script>
 </body>

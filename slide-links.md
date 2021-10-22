@@ -2,7 +2,8 @@
 
 ## Slides Code & extra material 
 - [Playground](https://hecosbornerod.github.io/a11yTOConf2021/examples/)
-
+## Slide 3
+- [bit.ly/a11y-eCommerce](https://bit.ly/a11y-eCommerce)
 ## Slide 7
 - [Visual Design Impact](https://hecosbornerod.github.io/a11yTOConf2021/examples/find-a-product-visual-representation.html)
 - [Input Type](https://hecosbornerod.github.io/a11yTOConf2021/examples/find-a-product-input-type.html)

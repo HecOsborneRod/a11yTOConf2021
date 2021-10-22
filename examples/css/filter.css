@@ -149,17 +149,6 @@ main ul li a:focus {
     box-shadow: none;
 }
 
-.logo {
-    background-color: var(--dark-color);
-    padding: .5rem 1rem;
-    text-decoration: none;
-    color: white;
-}
-
-.logo:hover {
-    outline: 3px solid var(--main-color);
-}
-
 aside label {
     cursor: pointer;
 }

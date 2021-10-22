@@ -27,6 +27,10 @@ body {
     padding: 1rem;
 }
 
+body.wide {
+    max-width: 50em;
+}
+
 @media screen and (min-width: 780px) {
     body {
         padding: 0;
@@ -316,4 +320,24 @@ kbd {
 .home {
     /* background-color: var(--dark-color);
     color: var(--light-color) */
+}
+
+.back-home {
+    margin-top: 4rem;
+    border: 1px solid var(--dark-color);
+    padding: 1rem 3rem;
+    display: inline-block;
+}
+
+
+.btn {
+    background-color: var(--dark-color);
+    padding: .5rem 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--body-bg), 0 0 0 6px var(--main-color);
 }

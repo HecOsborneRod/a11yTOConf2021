@@ -3,10 +3,13 @@
     --dark-color: #0B2030;
     --light-color: #FFF;
     --main-color: #EC5863;
-    --grey-dark: #ccc;
+    --grey-darker: #555;
+    --grey-dark: #BFBFBF;
     --grey: #aaa;
     --grey-light: #f2f2f2;
-    --link-color: #1d70b8;
+    --link-color: var(--dark-color);
+    --focus-color: #80b3ff;
+    --body-bg: #F2F2F2;
 }
 
 * {
@@ -16,7 +19,7 @@
 body {
     max-width: 40em;
     margin: 2em auto;
-    background-color: #f2f2f2;
+    background-color: var(--body-bg);
     color: var(--dark-color);
     font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
     line-height: 1.5em;
@@ -103,10 +106,9 @@ body {
 }
 
 .grt pre:focus {
-    /* border: 3px solid var(--dark-color); */
-    outline: 3px solid var(--main-color);
+    outline: 0;
     outline-offset: 0;
-    box-shadow: inset 0 0 0 1px;
+    box-shadow: 0 0 0 4px var(--body-bg), 0 0 0 6px var(--focus-color);
 }
 
 .grt kbd {
@@ -173,11 +175,20 @@ input[type="checkbox"] {
 
 button:focus,
 input:focus {
-    outline: 3px solid var(--main-color);
+    outline: 0;
     outline-offset: 0;
     z-index: 2;
+    box-shadow: 0 0 0 4px var(--body-bg), 0 0 0 6px var(--focus-color);
 }
 
+button {
+    appearance: none;
+    cursor: pointer ;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border: 0;
+    padding: .5rem 2rem;
+}
 
 input[type="search"].styled::-webkit-search-cancel-button {
   -webkit-appearance: none;
@@ -259,10 +270,12 @@ a {
 }
 
 a:focus {
-    color: var(--dark-color);
-    background-color: var(--main-color);
-    outline: 3px solid var(--main-color);
+    /* color: var(--dark-color);
+    background-color: var(--main-color); */
+    /* outline: 3px solid var(--main-color); */
+    outline: 0;
     outline-offset: 0;
+    box-shadow: 0 0 0 4px var(--body-bg), 0 0 0 6px var(--focus-color);
 }
 
 a:hover {

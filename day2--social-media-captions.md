@@ -2,6 +2,6 @@
 
 Speaker: Meryl Evans
 Twiter: [@merylkevans](https://twitter.com/merylkevans)
-Slides:
+[Slides](https://meryl.net/wp-content/uploads/2021/10/2021-a11yTO.pptx)
 
 ## Important links

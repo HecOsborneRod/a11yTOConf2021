@@ -15,30 +15,143 @@
         <h1>Product Card</h1>
     </header>
     <main>
-        <section class="card">
-            <div class="card__label">Clearance</div>
-            <svg width="200px" height="220px" viewBox="0 0 200 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="card__img">
-                <title>Product Card Image</title>
-                <desc>Created with Sketch.</desc>
-                <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
-                    <rect class="card__img-rect" id="Rectangle"  x="0" y="0" width="200" height="220"></rect>
-                </g>
-            </svg>
-            <div class="card__colour-picker">
-                <ul>
-                    <li><button>Red</button></li>
-                    <li><button>Blue</button></li>
-                    <li><button>Green</button></li>
-                    <li><button>Yellow</button></li>
-                    <li><button>Purple</button></li>
-                    <li><button>Red</button></li>
-                </ul>
+        
+        <p>Product cards are complex elements that are used in almost every page of an eCommerce website. They are used in pages like: home page , listing pages, search result page, category listing page. They also appear in carousels components: recommended products, recently viewed, frequently bought with.</p>
+        <p>They can contain multiple interactive elements, for example: product image, product name, brand name, ratings, colour picker and add to cart button.</p>
+        <p>These interactive elements most likely will have different behaviours for each of the states: <code>hover</code>, <code>focus</code>and <code>blur</code>. For example: when using the colour picker buttons, when should the image and product name link be changed? on hover or click?.</p>
+        <p>The desired interaction for each interactive element must be defined and documented in early stages of the program to reduce the confusion created later for developers y testers.</p>
+        <p>During a11yTO Conf 2020 Rian Rietveld gave a great presentation on Product Card interactions. Please refer to my <a href="https://hecosbornerod.github.io/a11yTOConf2020/Accessible_Cards.html">a11yTO 2020 notes</a> on her talk and to her playground <a href="https://a11y-collective.github.io/talks/cards/index.html">Cards example code</a>.</p>
+        <br/>
+        <hr/>
+        <section>
+            <h2>Default cards</h2>
+            <p>In this example I have made every element in the card clikable. Image the impact this will have when trying to navigate with your keyboard in a Search Result Page.</p>
+            <p>Users will have to use <kbd>TAB</kbd> or <kbd>SHIFT</kbd> <kbd>TAB</kbd> at least 7 or 8 times before they are able to add elements in the card. </p>
+            <blockquote>
+                <p><strong>Instructions:</strong> Use your keyboard & mouse to activate the product card interactive elements.</p>
+            </blockquote>
+            <div class="card">
+                <div class="card__label">Clearance</div>
+                <a href="#" class="card__img" aria-labelledby="card__name">
+                    <!-- image goes here -->
+                    <!-- <img src="URL" alt="Product Name + Color" /> -->
+                </a>
+                <div class="card__colour-picker">
+                    <ul>
+                        <li><button class="card__button grey selected" aria-label="Grey" title="Grey"  data-color="#e1e1e1"></button></li>
+                        <li><button class="card__button blue"   aria-label="Blue"   title="Blue"   data-color="#06213F"></button></li>
+                        <li><button class="card__button black"  aria-label="Black"  title="Black"  data-color="#222222"></button></li>
+                        <li><button class="card__button yellow" aria-label="Yellow" title="Yellow" data-color="#AC7302"></button></li>
+                        <li><button class="card__button purple" aria-label="Purple" title="Purple" data-color="#653D41"></button></li>
+                    </ul>
+                </div>
+                <div id="card__name" class="card__name"><a href="#">Everywhere backpack</a></div>
+                <div class="card__brand">by <a href="#">Brand Name</a></div>
+                <a href="#" class="card__rating-container">
+                    <span class="card__rating">
+                        <span class="card__rating-stars card__rating-stars--off" aria-hidden="true">★★★★★</span>
+                        <span class="card__rating-stars card__rating-stars--on" aria-hidden="true">★★★★★</span>
+                        <span class="sr-only">4 out of 5 stars</span>
+                    </span>
+                    <span class="card__rating-count">(200)</span>
+                </a>
+                <div class="card__price">
+                    <span aria-hidden="true">
+                        <span class="card__price-sale">$119.97</span>
+                        <span class="card__price-orig">$199.99</span>
+                    </span>
+                    <span class="sr-only">
+                        "Sale Price $119.97, Original Price $199.99"
+                    </span>
+                </div>
+                <button class="card__add-to-cart button">Add To Cart</button>
             </div>
-            <div class="card__name">Product Name</div>
-            <div class="card__brand">by <a href="#">Brand Name</a></div>
-            <div class="card__rating">4 out of 5 stars (200)</div>
-            <div class="card__price"><span class="card__price-sale">$119.97</span><span class="card__price-orig">$199.99</span></div>
-            <button class="card__button">Add To Cart</button>
+        </section>
+
+        <section>
+            <h2>Less clickable elements</h2>
+            <p>One possible optimization for keyboard and screen readers users could be to remove or hide clickable elements using <code>tabindex="-1"</code> and <code>aria-hidden="true"</code> on interactive elements in the component.</p>
+            <p>In the following cards the product image, brand name, reviews have been modified. Only the colour pickers, product name and add to cart buttons awere left as per default behaviour.</p>
+            <p>All the elements remain clickable using mouse, but now the elements are not actionable using Keyboard or Screen Reader.</p>
+            <div class="card">
+                <div class="card__label">Clearance</div>
+                <a href="#" class="card__img" tabindex="-1" aria-hidden="true">
+                    <!-- image goes here -->
+                    <!-- <img src="URL" alt="Product Name + Color" /> -->
+                </a>
+                <div class="card__colour-picker">
+                    <ul>
+                        <li><button class="card__button grey selected" aria-label="Grey" title="Grey"  data-color="#e1e1e1"></button></li>
+                        <li><button class="card__button blue"   aria-label="Blue"   title="Blue"   data-color="#06213F"></button></li>
+                        <li><button class="card__button black"  aria-label="Black"  title="Black"  data-color="#222222"></button></li>
+                        <li><button class="card__button yellow" aria-label="Yellow" title="Yellow" data-color="#AC7302"></button></li>
+                        <li><button class="card__button purple" aria-label="Purple" title="Purple" data-color="#653D41"></button></li>
+                    </ul>
+                </div>
+                <div class="card__name"><a href="#">Everywhere backpack</a></div>
+                <div class="card__brand">by <a href="#" tabindex="-1" >Brand Name</a></div>
+                <div class="card__rating-container">
+                    <div class="card__rating">
+                        <span class="card__rating-stars card__rating-stars--off" aria-hidden="true">★★★★★</span>
+                        <span class="card__rating-stars card__rating-stars--on" aria-hidden="true">★★★★★</span>
+                        <span class="sr-only">4 out of 5 stars</span>
+                    </div>
+                    <p class="card__rating-count"><a href="#reviews" tabindex="-1" aria-hidden="true">(200)</a></p>
+                </div>
+                <div class="card__price">
+                    <span aria-hidden="true">
+                        <span class="card__price-sale">$119.97</span>
+                        <span class="card__price-orig">$199.99</span>
+                    </span>
+                    <span class="sr-only">
+                        "Sale Price $119.97, Original Price $199.99"
+                    </span>
+                </div>
+                <button class="card__add-to-cart button">Add To Cart</button>
+            </div>
+        </section>
+
+
+        <section>
+            <p>In this card the product name link has a <code>&lt;span></code> element that covers the complete card,  making the card inner elements not selectable when using keyboard, and for mouse users the entire card is clickable.</p>
+            <p>One impact of this solution is that no longer the colour pickers or the add to card  are clickable elements. </p>
+            <div class="card fixed">
+                <div class="card__label">Clearance</div>
+                <a href="#" class="card__img" tabindex="-1" aria-hidden="true" aria-labelledby="card__name">
+                    <span></span>
+                    <!-- image goes here -->
+                    <!-- <img src="URL" alt="Product Name + Color" /> -->
+                </a>
+                <div class="card__colour-picker">
+                    <ul>
+                        <li><button class="card__button grey selected" aria-label="Grey" title="Grey"  data-color="#e1e1e1"></button></li>
+                        <li><button class="card__button blue"   aria-label="Blue"   title="Blue"   data-color="#06213F"></button></li>
+                        <li><button class="card__button black"  aria-label="Black"  title="Black"  data-color="#222222"></button></li>
+                        <li><button class="card__button yellow" aria-label="Yellow" title="Yellow" data-color="#AC7302"></button></li>
+                        <li><button class="card__button purple" aria-label="Purple" title="Purple" data-color="#653D41"></button></li>
+                    </ul>
+                </div>
+                <div class="card__name">Everywhere backpack</div>
+                <div class="card__brand">by Brand Name</div>
+                <div class="card__rating-container">
+                    <div class="card__rating">
+                        <span class="card__rating-stars card__rating-stars--off" aria-hidden="true">★★★★★</span>
+                        <span class="card__rating-stars card__rating-stars--on" aria-hidden="true">★★★★★</span>
+                        <span class="sr-only">4 out of 5 stars</span>
+                    </div>
+                    <p class="card__rating-count">(200)</p>
+                </div>
+                <div class="card__price">
+                    <span aria-hidden="true">
+                        <span class="card__price-sale">$119.97</span>
+                        <span class="card__price-orig">$199.99</span>
+                    </span>
+                    <span class="sr-only">
+                        "Sale Price $119.97, Original Price $199.99"
+                    </span>
+                </div>
+                <button class="card__add-to-cart button">Add To Cart</button>
+            </div>
         </section>
 
     </main>
@@ -47,5 +160,6 @@
     </footer>
 
     <script src="js/prism.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

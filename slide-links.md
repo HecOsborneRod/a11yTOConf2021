@@ -18,10 +18,10 @@
 - [Skip Filters](https://hecosbornerod.github.io/a11yTOConf2021/examples/filter-skip-filters.html)
 
 ## Slide 15
-- [Repeated Elements](http://localhost:5500/examples/filter-repeated-elements.html)
+- [Repeated Elements](https://hecosbornerod.github.io/a11yTOConf2021/examples/filter-repeated-elements.html)
 
 ## Slide 17
-- [Product Cards](http://localhost:5500/examples/product-card.html)
+- [Product Cards](https://hecosbornerod.github.io/a11yTOConf2021/examples/product-card.html)
 - [Rian Rietveld a11yTO Conf 2020 - Product Cards Talk Notes](https://hecosbornerod.github.io/a11yTOConf2020/Accessible_Cards.html)
 - [Rian Rietveld a11yTO Conf 2020 - Product Cards Example Code](https://a11y-collective.github.io/talks/cards/index.html)
 

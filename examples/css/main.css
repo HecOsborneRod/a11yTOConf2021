@@ -316,11 +316,6 @@ kbd {
     border: 2px solid;
     box-shadow: 1px 1px 0 #000, 2px 2px 0 #000;
 }
-/* HOME */ 
-.home {
-    /* background-color: var(--dark-color);
-    color: var(--light-color) */
-}
 
 .back-home {
     margin-top: 4rem;
